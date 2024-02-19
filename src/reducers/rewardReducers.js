@@ -1,8 +1,9 @@
 import { createAction, createReducer } from "@reduxjs/toolkit";
 
-const increment = createAction("reward/increment");
-const decrement = createAction("reward/decrement");
-const incrementByAmount = createAction("reward/incrementByAmount");
+//action creators
+export const increment = createAction("reward/increment");
+export const decrement = createAction("reward/decrement");
+export const incrementByAmount = createAction("reward/incrementByAmount");
 
 const initialState = { points: 0 };
 
@@ -18,3 +19,5 @@ const rewardReducer = createReducer(initialState, (builder) => {
       state.points += action.payload;
     });
 });
+
+export default rewardReducer;
